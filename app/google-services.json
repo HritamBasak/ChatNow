@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277143745535",
+    "project_id": "chatnow-3029a",
+    "storage_bucket": "chatnow-3029a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277143745535:android:ed15588b61a14043eb6dca",
+        "android_client_info": {
+          "package_name": "com.example.chatnow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS2G5EuhW8bCV68RP7gNVzZIufs8HUqRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
