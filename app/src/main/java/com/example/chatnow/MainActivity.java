@@ -17,6 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.chatnow.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
+import Adapter.FragmentAdapter;
+
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     FirebaseAuth auth;
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        binding.viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
+        binding.tablayout.setupWithViewPager(binding.viewPager);
+
         auth=FirebaseAuth.getInstance();
         ActionBar actionBar=getSupportActionBar();
         actionBar.setIcon(R.drawable.textting);

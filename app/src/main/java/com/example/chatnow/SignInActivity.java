@@ -54,6 +54,7 @@ public class SignInActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(getDrawable(R.drawable.actionbarbackground));
         auth = FirebaseAuth.getInstance();
+        database=FirebaseDatabase.getInstance();
         progressDialog = new ProgressDialog(SignInActivity.this);
         progressDialog.setTitle("Logging In");
         progressDialog.setMessage("Logging In to your account");

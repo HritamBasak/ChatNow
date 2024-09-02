@@ -66,6 +66,8 @@ public class SignUpActivity extends AppCompatActivity {
                             String id=task.getResult().getUser().getUid();//Getting the user from the Result of the Task by UID
                             database.getReference().child("Users").child(id).setValue(users);//Making the child node "Users" by their id  and setting and saving the values(username,mail,pass) into RealTime DataBase
                             Toast.makeText(SignUpActivity.this, "User Created Succesfully", Toast.LENGTH_SHORT).show();
+                            Intent intent=new Intent(SignUpActivity.this,MainActivity.class);
+                            startActivity(intent);
                         }
                         else {
                             Toast.makeText(SignUpActivity.this, "Uer Not Created", Toast.LENGTH_SHORT).show();
