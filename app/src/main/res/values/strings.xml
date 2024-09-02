@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ChatNow</string>
+    <string name="default_web_client_id">277143745535-edkc8p4jlpfe8hrvr7ckhm5lurl6u94r.apps.googleusercontent.com</string>
 </resources>
