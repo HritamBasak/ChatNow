@@ -26,21 +26,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/anek_bangla_semibold"
+            android:fontFamily="@font/alexandria_medium"
             android:foregroundGravity="center"
             android:text="Name"
             android:textColor="#050303"
-            android:textSize="18dp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/lastmessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/anek_bangla_semibold"
+            android:fontFamily="@font/alexandria_medium"
             android:foregroundGravity="center"
             android:text="Last Message"
-            android:textColor="#928686" />
+            android:textColor="#928686"
+            android:textSize="10sp" />
     </LinearLayout>
 
 </LinearLayout>
