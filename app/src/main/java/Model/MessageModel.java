@@ -1,7 +1,7 @@
 package Model;
 
 public class MessageModel {
-    String uid,message;
+    String uid,message,messageId;
     long timestamp;
 
     public MessageModel(String uid, String message, long timestamp) {
@@ -20,6 +20,14 @@ public class MessageModel {
 
     public String getUid() {
         return uid;
+    }
+
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
     }
 
     public void setUid(String uid) {

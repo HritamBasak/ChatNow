@@ -68,6 +68,17 @@ public class SignInActivity extends AppCompatActivity {
         binding.btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Checks if the email and password is Empty or Not
+                //if anyone of them is empty then it will show an error
+                if(binding.etEmail.getText().toString().isEmpty()) {
+                    binding.etEmail.setError("Enter Email");
+                    return;
+                }
+                if(binding.etPass.getText().toString().isEmpty()) {
+                    binding.etPass.setError("Enter Password");
+                    return;
+                }
+
                 progressDialog.show();
                 //Signing In with Email and Password
                 auth.signInWithEmailAndPassword(binding.etEmail.getText().toString(), binding.etPass.getText().toString())

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.chatnow.R;
 import com.example.chatnow.databinding.FragmentChatsBinding;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -53,6 +54,7 @@ public class ChatsFragment extends Fragment {
                 {
                     Users users=dataSnapshot.getValue(Users.class);
                     users.setUserId(dataSnapshot.getKey());
+                    if(!users.getUserId().equals(FirebaseAuth.getInstance().getUid()))
                     list.add(users);
                 }
                 usersAdapter.notifyDataSetChanged();

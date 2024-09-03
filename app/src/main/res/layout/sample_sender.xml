@@ -38,7 +38,6 @@
             android:text="Sender Message"
             android:textColor="#EFE8E8"
             app:layout_constraintBottom_toTopOf="@+id/senderTime"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/anek_bangla_semibold"
-            android:text="6:00 AM"
+            android:text="Sent"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline4" />

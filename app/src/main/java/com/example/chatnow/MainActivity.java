@@ -59,7 +59,13 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(item.getItemId()==R.id.settings)
         {
-            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(MainActivity.this,SettingsActivity.class);
+            startActivity(intent);
+        }
+        else if(item.getItemId()==R.id.chatroom)
+        {
+            Intent intent=new Intent(MainActivity.this,GroupChatActivity.class);
+            startActivity(intent);
         }
         return true;
     }

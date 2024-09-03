@@ -6,4 +6,7 @@
     <item
         android:id="@+id/settings"
         android:title="Settings" />
+    <item
+        android:id="@+id/chatroom"
+        android:title="ChatRoom"/>
 </menu>

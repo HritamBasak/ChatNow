@@ -16,12 +16,13 @@
         android:id="@+id/recieverText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
+        android:layout_marginTop="3dp"
         android:fontFamily="@font/anek_bangla_semibold"
         android:inputType="textMultiLine"
         android:maxWidth="270dp"
         android:minWidth="50dp"
         android:text="RecieverMessage"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/recieverTime"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:fontFamily="@font/anek_bangla_semibold"
-        android:text="12:00 PM"
+        android:text=" Recieved"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

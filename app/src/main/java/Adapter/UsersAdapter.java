@@ -13,6 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chatnow.ChatDetailActivity;
 import com.example.chatnow.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -44,6 +49,30 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>
         Picasso.get().load(list.get(position).getProfilePic()).placeholder(R.drawable.user).into(holder.image);
         holder.userName.setText(list.get(position).getUserName());
 
+        //Code for appearing the last message in the ChatAdapter
+        FirebaseDatabase.getInstance().getReference()
+                        .child("chats")
+                                .child(FirebaseAuth.getInstance().getUid()+users.getUserId())
+                                .orderByChild("timestamp")//Order the message in descending order i.e. the last message will be the first node
+                                .limitToLast(1)//Only the last message sent
+                                .addValueEventListener(new ValueEventListener() {//Changes addListenerForSingleValueEvent to addValueEventListener else the last message is shown if and only if we log in again
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    //If it has the last message then set the last message text to the last message
+                                        if(snapshot.hasChildren())
+                                        {
+                                            for(DataSnapshot snapshot1:snapshot.getChildren())
+                                            {
+                                                holder.lastMsg.setText(snapshot1.child("message").getValue().toString());
+                                            }
+                                        }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
